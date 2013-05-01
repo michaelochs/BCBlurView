@@ -19,3 +19,4 @@
 
 #import <BCBlurView/UIView+BCBlurView.h>
 #import <BCBlurView/BCBVView.h>
+#import <BCBlurView/BCBVButton.h>

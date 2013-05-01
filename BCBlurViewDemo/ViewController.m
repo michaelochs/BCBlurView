@@ -19,12 +19,15 @@
 
 #import "ViewController.h"
 
-#import "BCBlurView.h"
+#import <QuartzCore/QuartzCore.h>
+#import <BCBlurView/BCBlurView.h>
 
 
 @interface ViewController ()
 
 @property (nonatomic, weak, readwrite) IBOutlet BCBVView* blurView;
+@property (nonatomic, weak, readwrite) IBOutlet BCBVButton* buttonGloss;
+@property (nonatomic, weak, readwrite) IBOutlet BCBVButton* buttonStandard;
 
 @end
 
@@ -36,6 +39,15 @@
     [super viewDidLoad];
 	
 	self.blurView.blurRadius = 2.0f;
+	self.blurView.layer.borderColor = [[UIColor redColor] CGColor];
+	self.blurView.layer.borderWidth = 1.0f;
+	
+	self.buttonGloss.blurRadius = 2.0f;
+	self.buttonGloss.cornerRadius = 10.0f;
+	
+	self.buttonStandard.blurRadius = 3.0f;
+	self.buttonStandard.cornerRadius = 10.0f;
+	self.buttonStandard.borderColor = [UIColor whiteColor];
 }
 
 @end

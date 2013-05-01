@@ -34,6 +34,14 @@
 		4CB50D151731425F008EA01B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB50CD0173140BF008EA01B /* CoreImage.framework */; };
 		4CB50D161731425F008EA01B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB50CD2173140C5008EA01B /* QuartzCore.framework */; };
 		4CB50D2117314874008EA01B /* BCBVButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB50D2017314874008EA01B /* BCBVButton.m */; };
+		4CEBDE5E17317A2600DC87AE /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE5C17317A2600DC87AE /* button.png */; };
+		4CEBDE5F17317A2600DC87AE /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE5D17317A2600DC87AE /* button@2x.png */; };
+		4CEBDE6117317C6C00DC87AE /* BCBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB50D1717314294008EA01B /* BCBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CEBDE6217317C6C00DC87AE /* UIView+BCBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB50CCB1731408F008EA01B /* UIView+BCBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CEBDE6317317C6C00DC87AE /* BCBVView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB50CD417314190008EA01B /* BCBVView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CEBDE6417317C6C00DC87AE /* BCBVButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB50D1F17314873008EA01B /* BCBVButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CEBDE6717317EB100DC87AE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE6517317EB100DC87AE /* background.png */; };
+		4CEBDE6817317EB100DC87AE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE6617317EB100DC87AE /* background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +96,10 @@
 		4CB50D1717314294008EA01B /* BCBlurView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCBlurView.h; sourceTree = "<group>"; };
 		4CB50D1F17314873008EA01B /* BCBVButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBVButton.h; sourceTree = "<group>"; };
 		4CB50D2017314874008EA01B /* BCBVButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCBVButton.m; sourceTree = "<group>"; };
+		4CEBDE5C17317A2600DC87AE /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		4CEBDE5D17317A2600DC87AE /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
+		4CEBDE6517317EB100DC87AE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		4CEBDE6617317EB100DC87AE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,11 +241,29 @@
 				4CB50CEC17314223008EA01B /* Default.png */,
 				4CB50CEE17314223008EA01B /* Default@2x.png */,
 				4CB50CF017314223008EA01B /* Default-568h@2x.png */,
+				4CEBDE5C17317A2600DC87AE /* button.png */,
+				4CEBDE5D17317A2600DC87AE /* button@2x.png */,
+				4CEBDE6517317EB100DC87AE /* background.png */,
+				4CEBDE6617317EB100DC87AE /* background@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4CEBDE6017317C6400DC87AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEBDE6117317C6C00DC87AE /* BCBlurView.h in Headers */,
+				4CEBDE6217317C6C00DC87AE /* UIView+BCBlurView.h in Headers */,
+				4CEBDE6317317C6C00DC87AE /* BCBVView.h in Headers */,
+				4CEBDE6417317C6C00DC87AE /* BCBVButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4CB50C9F17314036008EA01B /* BCBlurView */ = {
@@ -242,6 +272,7 @@
 			buildPhases = (
 				4CB50C9C17314036008EA01B /* Sources */,
 				4CB50C9D17314036008EA01B /* Frameworks */,
+				4CEBDE6017317C6400DC87AE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -335,6 +366,10 @@
 				4CB50CEF17314223008EA01B /* Default@2x.png in Resources */,
 				4CB50CF117314223008EA01B /* Default-568h@2x.png in Resources */,
 				4CB50CF717314223008EA01B /* ViewController.xib in Resources */,
+				4CEBDE5E17317A2600DC87AE /* button.png in Resources */,
+				4CEBDE5F17317A2600DC87AE /* button@2x.png in Resources */,
+				4CEBDE6717317EB100DC87AE /* background.png in Resources */,
+				4CEBDE6817317EB100DC87AE /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +616,7 @@
 				4CB50CC717314037008EA01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB50CC817314037008EA01B /* Build configuration list for PBXNativeTarget "BCBlurViewTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +625,7 @@
 				4CB50CCA17314037008EA01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB50D0C17314224008EA01B /* Build configuration list for PBXNativeTarget "BCBlurViewDemo" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +634,7 @@
 				4CB50D0E17314224008EA01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
