@@ -20,7 +20,8 @@ To use BCBlurView you need to link the following frameworks:
 
 ## Install
 
-Add the BCBlurView project to your project and set the header search path to the path that contains the BCBlurView project folder.
+Add the BCBlurView project to your project.
+Set the header search path to "$(BUILT_PRODUCTS_DIR)/../../Headers". (Including the quotes!)
 Add BCBlurView as a target dependency and in the linker phase.
 Make sure to set the -ObjC linker flag in your build settings.
 See BCBlurViewDemo target for a reference, if you have problems, linking the library.
