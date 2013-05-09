@@ -39,14 +39,24 @@
 	// render the background we want to blur
 	self.hidden = YES; // make the button itself invisible as it should not be rendered!
 	
-	CGRect windowRect = [self.window convertRect:rect fromView:self];
+	// walk up the view hierarchy to find the first view that is opaque
+	UIView* viewToRender = self.superview;
+	while (!viewToRender.opaque) {
+		if (viewToRender.superview) {
+			viewToRender = viewToRender.superview;
+		} else {
+			break; // maybe the window isn't set opaque!
+		}
+	}
+	
+	CGRect renderRect = [viewToRender convertRect:rect fromView:self];
 	
 	UIGraphicsBeginImageContext(rect.size);
 	
-	CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -CGRectGetMinX(windowRect), CGRectGetMaxY(windowRect));
+	CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -CGRectGetMinX(renderRect), CGRectGetMaxY(renderRect));
 	CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0f, -1.0f);
 	
-	[self.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+	[viewToRender.layer renderInContext:UIGraphicsGetCurrentContext()];
 	
 	CGImageRef blurInputReference = [UIGraphicsGetImageFromCurrentImageContext() CGImage];
 	
