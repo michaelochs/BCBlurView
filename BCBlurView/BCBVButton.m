@@ -64,6 +64,12 @@
 
 #pragma mark - custom getter / setter
 
+- (void)setBlurRadius:(CGFloat)blurRadius
+{
+	_blurRadius = blurRadius;
+	[self setNeedsDisplay];
+}
+
 - (void)setCornerRadius:(CGFloat)cornerRadius
 {
 	self.layer.cornerRadius = cornerRadius;
